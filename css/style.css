@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Bowlby+One+SC&family=Montserrat:wght@300&family=Open+Sans:ital,wght@1,700&family=Roboto:ital,wght@1,900&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+
+}
+
+body {
+	background-color: #252932;
+	overflow-x: hidden;
+}
+
+header {
+	border-bottom: 0.1px solid rgb(158, 158, 158);
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px;
+}
+
+nav {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#logo {
+	text-decoration: none;
+	text-transform: uppercase;
+	color: white;
+	font-family: Montserrat;
+	margin: 0px 15px 0px 0px;
+	font-weight: normal;
+	color: #ffffff;
+}
+
+#menu {
+	margin: 15px;
+	list-style: none;
+	display: flex;
+	flex-direction: row;
+}
+
+.menu-link {
+	padding: 25px;
+	text-decoration: none;
+	text-transform: uppercase;
+	color: white;
+	font-family: Montserrat;
+	transition: background 0.5s;
+}
+
+.menu-link:hover {
+	background-color: white;
+}
+
+.btn-hamburguer {
+	background: none;
+	border: none;
+	margin: 0;
+	padding: 0;
+	display: none;
+	align-items: center;
+	justify-content: center;
+	width: 30px;
+	height: 30px;
+	margin-right: 10px;
+}
+
+.btn-hamburguer:hover {
+	cursor: pointer;
+}
+
+
+.hamburguer {
+	background: white;
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	height: 3px;
+	width: 40px;
+	align-items: center;
+}
+
+.hamburguer:before {
+	background: #ffffff;
+	content: '';
+	display: block;
+	position: absolute;
+	top: -13px;
+	width: 40px;
+	height: 3px;
+	transition: all 0.5s ease-in-out;
+}
+
+.hamburguer:after {
+	background: #ffffff;
+	content: '';
+	display: block;
+	position: relative;
+	top: 13px;
+	width: 40px;
+	height: 3px;
+	align-items: center;
+}
+
+#primeira-dobra {
+	border-bottom: 0.1px solid rgb(158, 158, 158);
+}
+
+#primeira-dobra-conteudo {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	margin-top: 130px;
+	margin-bottom: 130px;
+}
+
+#imagem-controle {
+	max-width: 400px;
+	animation: flutuar 5s infinite;
+}
+
+@keyframes flutuar{
+	0%{
+		transform: translateY(-10px);
+	}
+	50%{
+		transform: translateY(10px);
+	}
+	100%{transform: translateY(-10px);
+		
+	}
+
+}
+
+#apresentacao-conteudo {
+	display: flex;
+	flex-direction: column;
+	gap: 40px;
+	align-items: center;
+	width: 500px;
+}
+
+#apresentacao-h1 {
+	display: flex;
+	color: white;
+	font-family: Montserrat;
+	font-weight: normal;
+	text-transform: uppercase;
+	margin: 0;
+	padding: 0;
+	font-size: min(5vw, 25px);
+	white-space: nowrap;
+}
+
+#apresentacao-p {
+	font-family: Montserrat;
+	color: white;
+	width: 100%;
+}
+
+.btn-comprar {
+	background-color: #444444;
+	padding: 10px;
+	border: none;
+	font-family: Montserrat;
+	color: white;
+	font-size: 20px;
+	transition: all 350ms;
+	width: 100%;
+}
+
+.btn-comprar:hover {
+	background-color: rgb(179, 179, 179);
+	color: black;
+	font-weight: normal;
+	cursor: pointer;
+}
+
+#especificacoes-h1{
+	font-family: Montserrat;
+	color: white;
+	font-size: min(3vw, 35px);
+	margin: 20px;
+	text-align: center;
+	font-weight: normal;
+}
+
+
+
+
+@media (max-width: 990px) {
+	#apresentacao-h1{
+		font-size: 140%;
+	}
+	#apresentacao-conteudo {
+		width: 400px;
+		margin: 10px;
+	}
+	#imagem-controle{
+		width: 50vw;
+	}
+	#apresentacao-p{
+		font-size: min(3vw, 15px);
+	}
+}
+
+@media (max-width: 700px) {
+	#imagem-controle{
+		width: 70vw;
+	}
+	#apresentacao-h1{
+		font-size: 5vw;
+	}
+
+	#apresentacao-conteudo {
+		width: 100%;
+	}
+
+	#primeira-dobra-conteudo {
+		display: flex;
+		flex-direction: column;
+		margin: 30px;
+	}
+}
+
+@media (max-width: 550px) {
+	
+	header {
+		justify-content: space-between;
+	}
+	main{
+		transition: filter .5s ease-in-out;
+	}
+	#nav.active main{
+		filter: blur(5px);
+	}
+	#menu{
+		display: block;
+		position: absolute;
+		right: 0;
+		top: 59px;
+		margin: 0;
+		padding: 0;
+		width: 0px;
+		background-color: rgb(37, 41, 50);
+		z-index: 20;
+		height: 0px;
+		visibility: hidden;
+		overflow: hidden;
+		transition: all 0.5s ease-in-out;
+		height: calc(100vh - 59px);
+	}
+	#nav.active #menu {
+		width: 50%;
+		visibility: visible;
+	}
+
+	#menu li{
+		padding: 10px;
+		margin: 0;
+		width: 100%;
+	}
+	.menu-link{
+		padding: 0;
+	}
+
+	.btn-hamburguer {
+		display: flex;
+	}
+}
+
+@media (max-width: 420px){
+	#primeira-dobra-conteudo{
+		margin: 50px 30px 50px 30px
+	}
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>CONTROLE PERSONALIZADO</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body onresize="resizeBtn()" id="nav">
+	<header>
+		<h1 id="logo">LOGO</h1>
+		<nav >
+			<ul id="menu">
+				<li>
+					<a href="" class="menu-link">Home</a>
+				</li>
+				<li>
+					<a href="" class="menu-link">Produtos<a>
+				</li>
+				<li>
+					<a href="" class="menu-link">Sobre</a>
+				</li>
+			</ul>
+			<div class="btn-hamburguer" id="btn-hamburguer" onclick="hamburguerToggle()">
+				<div class="hamburguer"></div>
+			</div>
+		</nav>
+	</header>
+	<main>
+		<section id="primeira-dobra">
+			<div id="primeira-dobra-conteudo">
+				<div>
+					<img src="imagens/controle 1.png" alt="" id="imagem-controle">
+				</div>
+				<div id="apresentacao-conteudo">
+					<h1 id="apresentacao-h1">Controle personalizado</h1>
+					<p id="apresentacao-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, ratione
+						quisquam! Rem dignissimos eos blanditiis? Vel eaque pariatur quam et neque nobis ad autem,
+						adipisci illo maxime dolorum beatae totam lorem</p>
+					<button class="btn-comprar">Comprar</button>
+				</div>
+			</div>
+		</section>
+		<section id="especificacoes">
+			<div id="especificacoes-conteudo">
+				<h1 id="especificacoes-h1">Porque o nosso controle é o melhor do mercado?</h1>
+				<div class="especificacoes-div revelar">
+					<h1 class="especificacoes-div-h1">Desempenho</h1>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum suscipit facilisis aliquet. Mauris ac tellus turpis. Vivamus sed tempor est. Mauris in tellus non nisl mollis pharetra.</p>
+				</div>
+				<div class="especificacoes-div revelar">
+					<h1 class="especificacoes-div-h1">Conforto</h1>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum suscipit facilisis aliquet. Mauris ac tellus turpis. Vivamus sed tempor est. Mauris in tellus non nisl mollis pharetra.</p>
+				</div class="especificacoes-div-h1">
+				<div class="especificacoes-div revelar">
+					<h1>Personalizavel</h1>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum suscipit facilisis aliquet. Mauris ac tellus turpis. Vivamus sed tempor est. Mauris in tellus non nisl mollis pharetra.</p>
+				</div>
+			</div>
+		</section>
+	</main>
+</body>
+<script src="js/js.js"></script>
+</html>
