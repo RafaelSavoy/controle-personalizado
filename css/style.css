@@ -309,7 +309,7 @@ footer {
 .footer-form {
 	display: flex;
 	flex-direction: column;
-	width: 90%;
+	width: 400px;
 }
 
 .footer-form h1 {
@@ -472,5 +472,8 @@ footer {
 @media (max-width: 420px) {
 	#primeira-dobra-conteudo {
 		margin: 50px 30px 35px 30px
+	}
+	.footer-form{
+		width: 350px;
 	}
 }
