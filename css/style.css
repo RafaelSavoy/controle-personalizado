@@ -6,25 +6,6 @@
 	box-sizing: border-box;
 }
 
-::-webkit-scrollbar {
-	width: 8px;
-	height: 10px;
-}
-
-::-webkit-scrollbar-track:enabled {
-	background-color: #ffffff;
-}
-
-::-webkit-scrollbar-thumb:vertical {
-	border-radius: 10px;
-	background-color: #1a1b35;
-}
-
-::-webkit-scrollbar-thumb:horizontal {
-	background-color: #4e54c8;
-	border-radius: 10px;
-}
-
 html {
 	font-size: 62.5%
 }
