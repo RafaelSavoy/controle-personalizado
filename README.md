@@ -1,3 +1,5 @@
-Controle-Personalizado
+#Controle-Personalizado
 
-Is a simple landing page that shows how custom controls can give you the best experience and transform your game
+Is a simple landing page to train my HTML,CSS and Javascript.
+
+https://controle-personalizado.vercel.app/
