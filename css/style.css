@@ -256,7 +256,7 @@ header {
 .revelar {
 	transform: translateX(-1500px);
 	overflow: none;
-	transition: all 1.5s ease;
+	transition: transform 1.5s ease;
 }
 
 .revelar.active {
@@ -309,7 +309,7 @@ footer {
 .footer-form {
 	display: flex;
 	flex-direction: column;
-	width: 400px;
+	width: 90%;
 }
 
 .footer-form h1 {
