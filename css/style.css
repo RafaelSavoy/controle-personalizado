@@ -1,10 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Open+Sans&family=Roboto:ital,wght@0,400;1,900&family=Ubuntu:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Open+Sans&family=Poppins&family=Roboto:ital,wght@0,400;1,900&family=Ubuntu:wght@700&display=swap');
 
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-
 }
 
 ::-webkit-scrollbar {
@@ -37,8 +36,6 @@ html {
 body {
 	background: #4e54c8;
 	overflow-x: hidden;
-	opacity: 0;
-	transition: opacity 1s ease;
 }
 
 
@@ -214,7 +211,7 @@ header {
 }
 
 .btn-comprar:hover {
-	background-color: #888bc0;
+	background-color: #5a5c82;
 	color: rgb(255, 255, 255);
 	font-weight: 500;
 	cursor: pointer;
@@ -256,8 +253,6 @@ header {
 	-webkit-box-shadow: inset 0px 0px 15px 2px rgba(0, 0, 0, 0.49);
 	-moz-box-shadow: inset 0px 0px 15px 2px rgba(0, 0, 0, 0.49);
 	box-shadow: inset 0px 0px 15px 2px rgba(0, 0, 0, 0.49);
-
-
 }
 
 .especificacoes-div p {
@@ -269,89 +264,93 @@ header {
 }
 
 .especificacoes-div h1 {
-	text-align: center;
 	font-size: 3rem;
-	font-family: Montserrat;
-	font-weight: lighter;
+	font-family: 'Poppins', sans-serif;
+	font-weight: normal;
 	margin-bottom: 1rem;
 	color: var(apres-cor-text);
+	white-space: nowrap
 }
 
 .revelar {
 	position: relative;
-	transform: translateX(100rem);
 	opacity: 0;
 	transition: transform 1.5s ease-in-out;
+	transform: translateX(1500px);
 }
 
 .revelar.active {
-	transform: translateX(0rem);
+	transform: translateX(0px);
 	opacity: 1;
 }
 
 footer {
-	background: #494c83;
-	padding: 2.5rem;
+	background-color: #888bc0;
+	width: 100%;
+	padding: 20px;
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
-	height: 50vh;
 }
 
-#footer-nav {
+.footer-nav {
 	display: flex;
-	margin-left: 5rem;
 }
 
-.footer-list {
+.footer-nav ul {
 	list-style: none;
-	margin-right: 3rem;
+	margin: 30px;
 }
 
-.footer-list-title {
-	font-family: Open Sans;
-	font-size: 2rem;
-
+.footer-nav ul:before {
+	content: attr(title);
+	font-size: 23px;
+	margin: 2px;
+	font-family: Poppins;
+	font-weight: normal;
 }
 
-.footer-list li{
-	margin: 5px 0px 5px 0px;
+.footer-nav ul li {
+	margin: 2px;
 }
 
-.footer-list a {
+.footer-nav ul li a {
 	text-decoration: none;
 	color: white;
-	font-family: Montserrat;
-	font-size: 1.5rem;
+	font-size: 15px;
+	font-family: Poppins;
+	font-weight: normal;
 }
 
-.footer-list a:hover {
+.footer-nav ul li a:hover {
 	text-decoration: underline;
 }
 
-.container-btn {
-	height: 100px;
-	width: 50%;
+.footer-form {
 	display: flex;
 	flex-direction: column;
+	width: 400px;
 }
 
-#btn-h1 {
-	color: white;
-	font-family: Open Sans;
-	font-weight: normal;
+.footer-form h1 {
 	text-align: center;
-	font-size: 17px;
+	color: rgb(0, 0, 0);
+	font-family: Poppins;
+	font-weight: normal;
 }
 
-.input-footer {
-	padding: 5px;
+.footer-form input {
+	width: 100%;
+	padding: 10px;
+	margin: 10px 0px 10px 0px;
+	background-color: white;
 	border: none;
 	outline: none;
-	margin: 5px 0px 5px 0px;
-	width: 100%;
 }
 
+.footer-form .btn-comprar {
+	width: 100%;
+}
 
 @media (max-width: 990px) {
 	#apresentacao-h1 {
@@ -371,11 +370,10 @@ footer {
 		font-size: min(3vw, 1.5rem);
 	}
 
-
-
-	#footer-nav {
-		margin-left: 5%
+	footer {
+		flex-direction: column;
 	}
+
 }
 
 @media (max-width: 880px) {
@@ -401,17 +399,7 @@ footer {
 	}
 }
 
-@media(max-width: 730px) {
-
-	footer {
-		flex-direction: column;
-	}
-
-	#footer {
-		justify-content: space-around;
-		width: 100%;
-	}
-}
+@media(max-width: 730px) {}
 
 @media (max-width: 700px) {
 	#imagem-controle {
@@ -432,17 +420,6 @@ footer {
 		margin: 30px;
 	}
 
-	.footer-list a {
-		text-decoration: none;
-		color: white;
-		font-family: Montserrat;
-		font-size: 1.5rem;
-	}
-
-	.footer-list {
-		margin: 1.5rem;
-	}
-
 	.especificacoes-div {
 		width: 80%;
 	}
@@ -451,6 +428,9 @@ footer {
 }
 
 @media (max-width: 550px) {
+	.footer-nav ul li a {
+		font-size: 14px;
+	}
 
 	.especificacoes-div {
 		width: 90%;
@@ -506,13 +486,6 @@ footer {
 
 	.btn-hamburguer {
 		display: flex;
-	}
-
-	#footer {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		text-align: center;
 	}
 }
 
