@@ -253,9 +253,8 @@ header {
 	white-space: nowrap
 }
 
-.revelar {
+/* .revelar {
 	position: relative;
-	opacity: 0;
 	transition: transform 1.5s ease-in-out;
 	transform: translateX(1500px);
 }
@@ -263,7 +262,7 @@ header {
 .revelar.active {
 	transform: translateX(0px);
 	opacity: 1;
-}
+} */
 
 footer {
 	background-color: #888bc0;
